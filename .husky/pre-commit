@@ -1,6 +1,6 @@
-echo "✨ Running Prettier on entire project..."
+echo "🚀 Pre-commit checks starting..."
 npm run format || {
-  echo "❌ Prettier failed. Fix formatting before committing."
+  echo "❌ Prettier failed. Please check for syntax errors in your files."
   exit 1
 }
 
