@@ -1,3 +1,13 @@
-npm run format
-npm run lint:fix
-git add .
+echo "✨ Running Prettier on entire project..."
+npm run format || {
+  echo "❌ Prettier failed. Fix formatting before committing."
+  exit 1
+}
+
+echo "🔍 Running ESLint with auto-fix on entire project..."
+npm run lint:fix || {
+  echo "❌ ESLint failed. Fix errors before committing."
+  exit 1
+}
+
+echo "✅ Code formatted & linted successfully!"
