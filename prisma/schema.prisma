@@ -13,6 +13,8 @@ model Users {
   password String
   age      Int
   city     String
+  todos    Todo[]
+  // every user will have an array of todo's
 }
 
 model Todo {
@@ -21,4 +23,6 @@ model Todo {
   description String
   done        Boolean
   userId      Int
+  user        Users   @relation(fields: [userId], references: [id])
+  // every todo will have user, with userId field in here refrences id in Users
 }

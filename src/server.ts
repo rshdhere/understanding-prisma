@@ -7,8 +7,8 @@ const client = new PrismaClient();
 async function createUser() {
   await client.users.create({
     data: {
-      username: "raashed",
-      password: "halamadrid",
+      username: "shazeb",
+      password: "fc barcelona",
       age: 23,
       city: "hyd",
     },
